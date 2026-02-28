@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart English Quiz App (MVP)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Smart English Quiz App (MVP)</h1>
+      <p>Teacher + Student demo scaffold</p>
+    </header>
+
+    <main>
+      <section class="panel">
+        <h2>Teacher: AI Quiz Generator</h2>
+        <textarea id="lessonText" placeholder="Paste lesson text here..."></textarea>
+        <div class="row">
+          <label>
+            Difficulty
+            <select id="difficulty">
+              <option>Easy</option>
+              <option selected>Medium</option>
+              <option>Hard</option>
+            </select>
+          </label>
+          <label>
+            Type
+            <select id="qType">
+              <option>Mixed</option>
+              <option>Vocabulary meaning</option>
+              <option>Best preposition</option>
+              <option>Error detection</option>
+            </select>
+          </label>
+          <label>
+            Questions
+            <input id="qCount" type="number" min="1" max="20" value="5" />
+          </label>
+        </div>
+        <button id="generateBtn">Generate Questions</button>
+        <p id="generateMsg"></p>
+      </section>
+
+      <section class="panel">
+        <h2>Teacher: Question Bank</h2>
+        <ul id="questionList"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Teacher: Quiz Management</h2>
+        <div class="row">
+          <input id="quizTitle" placeholder="Quiz title" />
+          <input id="quizTopic" placeholder="Topic" value="Prepositions" />
+          <input id="quizTime" type="number" min="1" value="10" />
+        </div>
+        <button id="createQuizBtn">Create Quiz from Current Question Bank</button>
+        <ul id="quizList"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Student: Attempt Submission (Demo)</h2>
+        <div class="row">
+          <input id="studentName" placeholder="Student name" value="Aisha Khan" />
+          <input id="attemptQuizTitle" placeholder="Quiz title" value="Preposition Practice" />
+          <input id="correct" type="number" min="0" value="4" />
+          <input id="total" type="number" min="1" value="5" />
+        </div>
+        <button id="submitAttemptBtn">Submit Attempt</button>
+      </section>
+
+      <section class="panel metrics">
+        <h2>Dashboard Overview</h2>
+        <div id="metricsGrid"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
